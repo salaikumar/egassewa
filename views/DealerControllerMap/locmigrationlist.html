@@ -1,0 +1,20 @@
+
+#{extends 'main.html' /}
+#{set title:'Apply Online' /}
+</br>
+<div align="center"><h1>List of Dealer Change Requests</h1></div>
+</br></br><table align="center" border="0" cellspacing="25px">
+  <tr>
+    <th><h2>Application #</h2></th>
+    <th><h2>Name</h2></th>
+  </tr>
+  #{list items:l ,as:'l'} 
+  <tr>
+    <td><a href="@{DealerControllerMap.locmigration(l.id)}">${l.id}</td>
+    <td><a href="@{DealerControllerMap.locmigration(l.id)}">${l.account.username}</td>
+       <td><a href="@{DealerControllerMap.locmigration(l.id)}">${l.timestamp}</td>
+    
+  </tr>
+
+#{/list}       
+</table></br></br></br></br></br></br></br></br></br></br></br></br>

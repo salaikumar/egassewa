@@ -1,0 +1,21 @@
+
+#{extends 'user.html' /}
+#{set title:'Order History' /}
+</br>
+<div align="center"><h1>Booked History</h1></div>
+</br></br><table align="center" border="0" cellspacing="25px">
+  <tr>
+    <th><h2>Order Number #</h2></th>
+    <th><h2>Order Type</h2></th>
+    <th><h2>Order Status</h2></th>
+  </tr>
+  #{list items:l ,as:'l'} 
+  <tr>
+    <td><a href="@{UserControllerMap.checkstatus(l.id)}">${l.ordernumber}</td>
+     <td><a href="@{UserControllerMap.checkstatus(l.id)}">${l.gasCylinderId.gasCylinderUnit}</td>
+     <td><a href="@{UserControllerMap.checkstatus(l.id)}">${l.orderstatus}</td>
+   
+  </tr>
+
+#{/list}       
+</table></br></br></br></br></br></br></br></br></br></br></br></br>

@@ -1,0 +1,157 @@
+#{extends 'dealer.html' /}
+#{set title:'Local Area' /}
+
+
+    <div class="content">
+    	
+        <div class="cont">
+        	<div class="width">
+            	<div class="col620">
+                	<h2 style="margin-bottom:-10px;">Local Area </h2>
+                    <div class="info">
+                    <div class="bread">
+					</div>					
+                    
+			
+		</div>
+                     
+
+<div class="content">
+<div class="width">
+
+</br>	
+</br>
+
+<div class="clear">
+    	<table width="100%" border="0" cellspacing="1" cellpadding="3">
+
+			
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><h3>Application Details</h3></br></td>
+
+              <td colspan="2" >
+
+			</tr>
+			
+
+            <tr valign="top">
+
+              <td>&nbsp;</td></br>
+
+              <h4><td height="25" >Application Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${l.id} </td></h4>
+
+            </tr>
+
+            <tr valign="top">
+            
+            
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Date Applied &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.timestamp }</td></br></h4>
+
+              <td colspan="2" >
+
+			</tr>
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"></br><h3>Customer Details</h3></br></td>
+
+              <td colspan="2" >
+
+			</tr>
+			
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Customer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ c.firstname}</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25"> Gas Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ c.gasConnectionNumber }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+						<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"></br><h3>Location Change Details</h3></br></td>
+
+              <td colspan="2" >
+
+			</tr>
+			
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Old Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ c.address }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+			
+			
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">New Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.newAddress}</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+
+              <h4><td height="25">Status 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.status }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+						
+			
+			
+			
+</table></br></br> &nbsp;&nbsp;
+  	    
+</div>       #{a @LocationChangeController.setApprovalStatus(c.id) }<input type="submit" name="submit" value="Approve" onClick=""> #{/a}
+						   #{a @LocationChangeController.discard(c.id) }<input type="submit" name="discard" value="Discard" onClick="">#{/a}
+		    
+			 			 <a href="#" onClick=" window.print(); return false"> <h3> Print </h3> 	  </a>			
+			 
+</div>
+</div>
+                            
+                            <div class="cls"></div>
+                        </div>
+                    </div>
+                </div>
+			  
+                </div>
+                <div class="cls"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+				</html>

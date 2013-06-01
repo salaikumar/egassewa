@@ -1,0 +1,143 @@
+ #{extends 'dealer.html' /}
+#{set title:'Order' /}
+<div class="content">
+<div class="width">
+
+</br>	
+</br>
+
+<div class="clear">
+    	<table width="100%" border="0" cellspacing="1" cellpadding="3">
+
+			
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><h3>Order Details</h3></br></td>
+
+              <td colspan="2" >
+
+			</tr>
+			
+
+            <tr valign="top">
+
+              <td>&nbsp;</td></br>
+
+              <h4><td height="25" >Order Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${l.id} </td></h4>
+
+            </tr>
+
+            <tr valign="top">
+            
+            
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Order Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.orderedAt }</td></br></h4>
+
+              <td colspan="2" >
+
+			</tr>
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"></br><h3>Customer Details</h3></br></td>
+
+              <td colspan="2" >
+
+			</tr>
+			
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Customer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.gasConnectionHolder.username}</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25"> Gas Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.gasConnectionHolder.uniquenumber }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+						<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"></br><h3>Cylinder Details</h3></br></td>
+
+              <td colspan="2" >
+
+			</tr>
+			
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Order Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.gasCylinderId.gasCylinderType }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+			
+			
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Order Unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.gasCylinderId.gasCylinderUnit }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Order Count 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.orderCount }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+						
+			
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Order Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.gasCylinderId.gasCylinderPrice }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+			
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Order Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ l.orderstatus }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+			
+</table></br></br> &nbsp;&nbsp;
+  #{a @OrderController.confirmOrder(l.id) }<input type="submit" name="submit" value="Confirm" onClick=""> #{/a}
+  #{a @OrderController.deliverOrder(l.id) }<input type="submit" name="submit" value="Deliver" onClick=""> #{/a}
+  #{a @OrderController.discard(l.id) }<input type="submit" name="discard" value="Cancel" onClick="">#{/a}
+		    
+			 
+</div>
+</div>
+</div>

@@ -1,0 +1,192 @@
+#{extends 'user.html' /}
+#{set title:'Update Account' /}
+
+ <center><h4> The Mail id already exists!!!</center></h4> 
+#{ form @AccountController.updateAccount() }
+<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Account</a><span>>></span><strong>Update Account</strong>
+            </div>
+        </div>
+        <div class="check">
+        	<div class="width">
+            	<h2 style="margin-bottom:40px;">Fail</h2>
+            	<div class="cls"></div>
+				
+
+<div id="leftpanel">
+
+	<h3 class="heading1">Updating on GasMate	 </h3>
+
+    <fieldset>
+
+    <form action="" method="post" name="booking" id="booking" onSubmit="return check();" >
+
+          <table width="100%" border="0" cellspacing="1" cellpadding="0">
+
+			 <tr valign="top">
+
+              <td colspan="3" align="right" style="padding-top:5px; padding-bottom:5px;">
+
+              </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td width="1%">&nbsp;</td>
+
+              <td height="25" colspan="3"><strong>Online Account Detail </strong>
+
+                  <input name="mode" type="hidden" id="mode" value="add">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#FF0000"></span></td>
+
+            </tr>
+
+			
+
+
+              
+           
+                       <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><label for="username">User Name</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="username" type="text" id="username" title="User Name" value="" maxlength="50" onblur="check_email_id();" />
+
+              <input type="hidden" name="check_email" id="check_email" value="0" />
+
+					<span style="display:none;" id="temp_response"></span>
+					
+					<div id="id_checking" style="  height:28px; width:198px; margin-top:3px; border:solid 1px #999999; background-color:#E4E4E4; display:none;">
+
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td>
+										<img src="images/ajax_small_load.gif" />									</td>
+									<td class="error" style="padding-left:2px;" >
+										Please wait while we are validating your User Name									</td>
+								</tr>
+							</table>
+					  </div>			  </td>
+            </tr>
+			
+			  <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><label for="password">Password</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="password" type="password" id="password" title="User Name" value="" maxlength="50" onblur="check_email_id();" />
+
+              <input type="hidden" name="check_email" id="check_email" value="0" />
+
+					<span style="display:none;" id="temp_response"></span>
+					
+					<div id="id_checking" style="  height:28px; width:198px; margin-top:3px; border:solid 1px #999999; background-color:#E4E4E4; display:none;">
+
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td>
+										<img src="images/ajax_small_load.gif" />									</td>
+									<td class="error" style="padding-left:2px;" >
+										Please wait while we are validating your User Name									</td>
+								</tr>
+							</table>
+					  </div>			  </td>
+            </tr>
+		
+	<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><label for="phonenumber">Phonenumber</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="phonenumber" type="text" id="username" title="User Name" value="" maxlength="50" onblur="check_email_id();" />
+
+              <input type="hidden" name="check_email" id="check_email" value="0" />
+
+					<span style="display:none;" id="temp_response"></span>
+					
+					<div id="id_checking" style="  height:28px; width:198px; margin-top:3px; border:solid 1px #999999; background-color:#E4E4E4; display:none;">
+
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td>
+										<img src="images/ajax_small_load.gif" />									</td>
+									<td class="error" style="padding-left:2px;" >
+										Please wait while we are validating your User Name									</td>
+								</tr>
+							</table>
+					  </div>			  </td>
+            </tr>
+			
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><label for="email">E-mail</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="email" id="rtebemail" type="text" value="" maxlength="70" onblur="check_id();">
+
+              <div id="emailid_checking" style="  height:28px; width:198px; margin-top:3px; border:solid 1px #999999; background-color:#E4E4E4; display:none;">
+
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+
+								<tr>
+									<td>
+										<img src="images/ajax_small_load.gif" />									</td>
+
+									<td class="error" style="padding-left:2px;" >
+
+										Please wait while we are validating your Email Id									</td>
+
+								</tr>
+
+							</table>
+
+				</div></td>
+
+            </tr>
+
+                        <tr>
+
+              <td>&nbsp;</td>
+
+              <td></td>
+
+              <td>&nbsp;</td>
+
+            </tr>
+
+            <tr>
+
+            <td>&nbsp;</td>
+
+            <td>            </td>
+
+            </tr>
+
+            
+            <tr align="center" valign="top">
+
+              <td colspan="4"><!--<input type="image" name="Submit" value="Submit" tabindex="7" id="submit_btn" src="images/submit.gif"  style="border:none">-->
+
+                 <!--<input type="reset" name="reset" value="Reset">--> <input type="submit" value="Submit" name="Submit" class="mybutton" id="submit_btn"  />             </td>
+
+            </tr>
+          </table>            
+	</form>
+
+    </fieldset>	
+
+</div>   
+
+            </div>
+        </div>
+        
+    </div>
+    
+    #{/form}

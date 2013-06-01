@@ -1,0 +1,25 @@
+
+#{extends 'user.html' /}
+#{set title:'Booked History' /}
+<div class="content">
+<div class="width">
+</br>
+<div align="center"><h3>Booked Accessories History</h3></div>
+</br></br><table align="center" border="0" cellspacing="40px">
+  <tr>
+    <th><h3>Order ID</h3></th>
+    <th><h3> Accessories Name</h3></th>
+    <th><h3> Date</h3></th>
+    
+  </tr>
+  #{list items:o ,as:'l'} 
+  <tr>
+    <td><a href="@{UserControllerMap.individualaccesoriesorder(l.id)}">${l.id}</td>
+     <td><a href="@{UserControllerMap.individualaccesoriesorder(l.id)}">${l.accessoriesId.name}</td>
+     <td><a href="@{UserControllerMap.individualaccesoriesorder(l.id)}">${l.ordertime}</td>
+   
+  </tr>
+
+#{/list}       
+</table>
+</div></div></br></br></br></br></br></br></br></br></br></br></br></br>

@@ -1,0 +1,78 @@
+#{extends 'main.html' /}
+#{set title:'Account' /}
+
+<div class="content">
+
+				<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><a href="#">Account</a><span>>></span><strong>Login or Create Account</strong>
+            </div>
+        </div>
+        <div class="login">
+        	<div class="width">
+            	<h2>Login or Create Account</h2>	
+                <div class="cols">
+                    <div class="mnu">
+                    	<h4>I am a New Customer</h4>
+                        <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+                        <a href=@{application.create_acc} class="button"><span><span>Create Account</span></span></a>
+                    </div>
+					
+					<!-- To validate form (Intimation for giving proper username and password)-->
+					<script>
+
+					function validate()
+					{
+							var value1= document.getElementById('userName')
+						if(value1.value=="")
+							{
+							alert ("Please enter User Name")
+							return false
+							}
+						if (value1.value.indexOf("@")==-1)
+							{
+							alert("It seems you entered an invalid email address.")
+							return false
+							}
+
+							var value2= document.getElementById('password')
+						if(value2.value=="")
+							{
+							alert ("Please enter Password")
+							return false
+							}
+					}
+					
+					
+
+</script>
+
+                    <div class="colR">
+                    	<h4>I am a Returning Customer</h4>
+                        <span class="label"><label for="username">Username</label></span>
+                        <input type="text" value="" name="username" id="userName"/>
+                        <span class="label"><label for="password">password</label></span>
+                        <input type="password" value="" name="password" id="password"/>
+                        <a href="#">Forgot Your Password?</a>
+                        <a href=# class="button" onClick = "validate()"><span><span>Login</span></span></a>
+                    </div>
+                    <div class="cls"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+				
+				
+            </div>
+        </div>
+        
+    </div>  
+
+
+
+
+
+
+  

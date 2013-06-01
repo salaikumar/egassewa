@@ -1,0 +1,51 @@
+#{extends 'dealer.html' /}
+#{set title:'Account' /}
+
+<div class="content">
+
+				<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><a href="#">Dealer Account</a><span>>></span><strong>Login</strong>
+            </div>
+        </div>
+        <div class="login">
+        	<div class="width">
+            	<h2>Login to Dealer Account</h2>	
+                <div class="cols">
+                    
+					
+					<!-- To validate form (Intimation for giving proper username and password)-->
+		                    <div class="colR">
+        #{form @AccountController.newDealerlogin()}            	
+                        <span class="label">Dealer ID</span>
+                        <font color="blue"><span class="error">#{error 'uniquenumber' /}</span></font>
+                        <input type="text" value="${flash.uniquenumber}" name="uniquenumber" id="userName"/>
+                        
+                        <span class="label">password</span>
+                    		    <font color="blue"><span class="error">#{error 'password' /}</span></font>
+                        <input type="password" value="" name="password" id="password"/>
+                        <a href="@{application.forgotpassword}">Forgot Your Password?</a>
+                        
+                        <input type="submit" name="submit" value="submit"    />
+                        <input type="reset" name="reset"  value="reset"   />
+                    </div>
+                    <div class="cls"></div>
+                </div>
+            </div>
+        </div>
+        #{/ form }
+    </div>
+				
+				
+            </div>
+        </div>
+        
+    </div>  
+
+
+
+
+
+
+  

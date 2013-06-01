@@ -1,0 +1,130 @@
+ #{extends 'dealer.html' /}
+#{set title:'Order' /}
+<div class="content">
+<div class="width">
+
+</br>	
+</br>
+
+<div class="clear">
+    	<table width="100%" border="0" cellspacing="1" cellpadding="3">
+
+			
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><h3>Order Details</h3></br></td>
+
+              <td colspan="2" >
+
+			</tr>
+			
+
+            <tr valign="top">
+
+              <td>&nbsp;</td></br>
+
+              <h4><td height="25" >Order Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $o.id} </td></h4>
+
+            </tr>
+
+            <tr valign="top">
+            
+            
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Order Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ o.ordertime }</td></br></h4>
+
+              <td colspan="2" >
+
+			</tr>
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"></br><h3>Customer Details</h3></br></td>
+
+              <td colspan="2" >
+
+			</tr>
+			
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Customer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ o.accountId.username}</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25"> Gas Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ o.accountId.uniquenumber }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+						<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"></br><h3>Accessories Details</h3></br></td>
+
+              <td colspan="2" >
+
+			</tr>
+			
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Accessories Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ o.accessoriesId.name }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+			
+			
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Count &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ o.ordercount }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Price  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${o.accessoriesId.price }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+						
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <h4><td height="25">Order Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${ o.orderstatus }</td></h4>
+
+              <td colspan="2" >
+
+			</tr>
+			
+</table></br></br> &nbsp;&nbsp;
+  #{a @OrderController.orderConformAccessories(l.id) }<input type="submit" name="submit" value="Confirm" onClick=""> #{/a}
+  #{a @OrderController.dispatchAccessories(l.id) }<input type="submit" name="submit" value="Deliver" onClick=""> #{/a}
+			 
+</div>
+</div>
+</div>

@@ -1,0 +1,59 @@
+#{extends 'user.html' /}
+#{set title:'Local Area' /}
+
+#{ form @LocationChangeController.changeLocationAlone()}
+    <div class="content">
+    	
+        <div class="cont">
+        	<div class="width">
+            	<div class="col620">
+                	<h2 style="margin-bottom:-10px;">Local Area </h2>
+                    <div class="info">
+                    <div class="bread">
+					</div>					
+                    
+			
+		</div>
+		<marquee><h4><div><center> Only Local address changes(under same dealer)can be applied here!</center> </div></br></br></h4></marquee>
+		
+                    <div class="contFrm">
+                		<h5>Location change </h5>
+                        <div class="form">
+                        	<div class="fltL">
+                            	<span class="label"><span class="red">*</span><label for="name">Name</label></span>
+                            	 <span class="error"><font size="2" color=blue>#{error 'name' /}</font></span>
+	                            <input type="text" value="${flash.name}" name="name"/>
+                            </div>
+							
+                            <div class="cls"></div>
+                            <div class="fltL">
+                            	<span class="label"><span class="red">*</span><label for="gasConnectionNumber">Gas Connection ID</label></span>
+                            	 <span class="error"><font size="2" color=blue>#{error 'gasConnectionNumber' /}</font></span>
+	                            <input type="text" value="${flash.gasConnectionNumber}" name="gasConnectionNumber"/>
+                            </div>
+							
+                            <div class="cls"></div>
+                            <span class="label"><span class="red">*</span><label for="newAddress" >New Address</label></span>
+                            <span class="error"><font size="2" color=blue>#{error 'newAddress' /}</font></span>
+                            <textarea rows="3" cols="1" name="newAddress" value="${flash.newAddress}"></textarea>
+                                                                               
+                            
+                            <input type="submit" name="submit" value="submit"    />
+                        	<input type="reset" name="reset"  value="reset"   />
+							<a href="#" onClick=" window.print(); return false"> <h3> Print </h3> 	  </a>			
+                        	
+                            <div class="cls"></div>
+                        </div>
+                    </div>
+                </div>
+			  
+                </div>
+                <div class="cls"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+				</html>
+#{/form}

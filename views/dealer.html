@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="@{'/public/css/style.css'}" />
+<link rel="stylesheet" type="text/css" href="@{'/public/css/uniform.default.css'}" />
+<link type="image/vnd.microsoft.icon" rel="shortcut icon" href="/public/img/cart.png"/>
+<script type="text/javascript" src="/public/js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="/public/js/jquery-ui-1.8.9.custom.min.js"></script>
+<script language="javascript" src="/public/js/highlight.js" type="text/javascript"></script>
+<script src="/public/js/easySlider1.7.js" type="text/javascript"></script>
+<script src="/public/js/jquery.uniform.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+		$('.featured').easySlider();
+		$("select, input, input:checkbox, input:radio, input:file").uniform();
+});
+</script>
+<title>#{get 'title' /}</title>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="headtop">
+      <div class="width">
+        <div class="srch">
+			<iframe src="http://free.timeanddate.com/clock/i3061y2l/n553/fn10/tceee/pct/pa2/tt0/tw1/tm1/td2/th1/ta1/tb2" frameborder="0" width="219" height="21" allowTransparency="true"></iframe>
+
+		  
+          <div class="cls"> </div>
+        </div>
+        
+        <div class="cls"></div>
+      </div>
+    </div>
+    <div class="headbot">
+      <div class="width">
+	  
+        <div class="logo"> <a href=@{application.index}><h1><strong><em> GasMate</em></strong></h1> </a> </div>
+			
+        <div class="cls"></div>
+      </div>
+    </div>
+  </div>
+#{doLayout /}
+</div>
+<div class="footer">
+  <div class="width">
+    <div class="divi">
+      <h3>Information</h3>
+      <ul>
+        <li><a href=@{application.about}>About Us</a></li>
+        <li><a href="delivery_information.html">Delivery Information</a></li>
+        <li><a href="privacy_policy.html">Privacy Policy</a></li>
+        <li><a href="terms_condition.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="divi">
+      <h3>Customer Service</h3>
+      <ul>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="returns.html"> Returns</a></li>
+        <li><a href="site_map.html">Site Map</a></li>
+      </ul>
+    </div>
+    <div class="divi">
+      <h3>Extras</h3>
+      <ul>
+        <li><a href=@{application.rules}>Gas Rules</a></li>
+ 
+      </ul>
+    </div>
+    <div class="divi last">
+      <h3>My Account</h3>
+      <ul>
+        <li><a href=@{application.account}>My Account</a></li>
+        <li><a href="order_history.html">Order History</a></li>
+        <li><a href="wish_list.html">Wish List</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+      </ul>
+    </div>
+    <div class="cls"></div>
+  </div>
+  <div class="copy">
+    <div class="width">
+      <p>Copyright 2011. ViewTrix Labs .</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

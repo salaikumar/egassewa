@@ -1,0 +1,349 @@
+#{extends 'main.html' /}
+#{set title:'Create Account' /}
+
+<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><strong>Create Account</strong>
+            </div>
+        </div>
+        <div class="check">
+        	<div class="width">
+            	<h2 style="margin-bottom:40px;">Create Account</h2>
+            	<div class="cls"></div>
+				
+
+<div id="leftpanel">
+
+	<h3 class="heading1">Registering on GasMate	 </h3>
+
+    
+
+    <form action="" method="post" name="booking" id="booking" onSubmit="return check();" >
+
+          <table width="100%" border="0" cellspacing="1" cellpadding="0">
+
+			 <tr valign="top">
+
+              <td colspan="3" align="right" style="padding-top:5px; padding-bottom:5px;">
+
+              </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td width="1%">&nbsp;</td>
+
+              <td height="25" colspan="3"><strong>Distributor Detail </strong>
+
+                  <input name="mode" type="hidden" id="mode" value="add">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#FF0000"></span></td>
+
+            </tr>
+
+			<tr valign="top">
+
+
+
+              <td>&nbsp;</td>
+
+
+
+              <td width="27%" height="25" >State <span class="error">*</span></td>
+
+
+
+              <td width="72%" colspan="2">
+
+
+
+				  <select name="bgstate" id="bgstate" style="width:200px" onChange="showcat(this,'sub1','state');">
+
+				  <option value="" selected="selected">[ SELECT STATE ]</option>
+
+					  <option value="2169" >Andhra Pradesh</option>
+
+					  <option value="2196" >Arunachal Pradesh</option>
+
+					  <option value="2170" >Assam</option>
+
+					  <option value="2171" >Bihar</option>
+
+					  <option value="5267" >Chhattisgarh</option>
+
+					  <option value="2174" >Delhi</option>
+
+					  <option value="2199" >Goa</option>
+
+					  <option value="2175" >Gujarat</option>
+
+					  <option value="2176" >Haryana</option>
+
+					  <option value="2177" >Himachal Pradesh</option>
+
+					  <option value="2178" >Jammu and Kashmir</option>
+
+					  <option value="5268" >Jharkhand</option>
+
+					  <option value="2185" >Karnataka</option>
+
+					  <option value="2179" >Kerala</option>
+
+					  <option value="2181" >Madhya Pradesh</option>
+
+					  <option value="2182" >Maharashtra</option>
+
+					  <option value="2183" >Manipur</option>
+
+					  <option value="2184" >Meghalaya</option>
+
+					  <option value="2197" >Mizoram</option>
+
+					  <option value="2186" >Nagaland</option>
+
+					  <option value="2187" >Orissa</option>
+
+					  <option value="2189" >Punjab</option>
+
+					  <option value="2190" >Rajasthan</option>
+
+					  <option value="2195" >Sikkim</option>
+
+					  <option value="2191" >Tamil Nadu</option>
+
+					  <option value="2192" >Tripura</option>
+
+					  <option value="5269" >UNION TERRITORY</option>
+
+					  <option value="2193" >Uttar Pradesh</option>
+
+					  <option value="5259" >Uttaranchal</option>
+
+					  <option value="2194" >West Bengal</option>
+
+			  </select>				</td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" >City <span class="error">*</span></td>
+
+              <td colspan="2">
+
+			  <span id="sub1">
+
+			  <select name="bgcity" style="width:200px" onChange="showcat(this,'sub2','city');">
+
+              	 <option value="">[SELECT CITY]</option>
+
+		      </select>  
+
+			   </span> 
+
+			   	<span id="state_loading" style="display:none;"><img src="images/ajax_small_load.gif" /></span>				</td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25">Distributor <span class="error">*</span></td>
+
+              <td colspan="2" >
+
+			  <span id="sub2">
+
+              <select name="rtbgagid1" style="width:200px" title="distributor" id="rtbgagid1">
+
+           	  	<option>[ SELECT DISTRIBUTOR]</option>
+
+			  </select>
+
+			  </span>
+
+			  	<span id="city_loading" style="display:none;"><img src="images/ajax_small_load.gif" /></span>			
+
+				<div id="temp_ajax_div" style="display:none;"></div>			  </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><span style="width:200px">Consumer No. <span class="error">*</span></span></td>
+
+              <td colspan="2"><input name="rtcon" id="rtcon" type="text" title="consumer no." value="" style="width:80px" maxlength="20"/>
+
+                <span style="color:#FF0000">
+
+                              [Please write exactly as you see it on your last refill cash memo.]</span></td>
+
+            </tr>
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25">User Name <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="username" type="text" id="username" title="User Name" value="" maxlength="50" onblur="check_email_id();" />
+
+              <input type="hidden" name="check_email" id="check_email" value="0" />
+
+					<span style="display:none;" id="temp_response"></span>
+					
+					<div id="id_checking" style="  height:28px; width:198px; margin-top:3px; border:solid 1px #999999; background-color:#E4E4E4; display:none;">
+
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td>
+										<img src="images/ajax_small_load.gif" />									</td>
+									<td class="error" style="padding-left:2px;" >
+										Please wait while we are validating your User Name									</td>
+								</tr>
+							</table>
+					  </div>			  </td>
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25">E-mail <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="rtebemail" id="rtebemail" type="text" value="" maxlength="70" onblur="check_id();">
+
+              <div id="emailid_checking" style="  height:28px; width:198px; margin-top:3px; border:solid 1px #999999; background-color:#E4E4E4; display:none;">
+
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+
+								<tr>
+									<td>
+										<img src="images/ajax_small_load.gif" />									</td>
+
+									<td class="error" style="padding-left:2px;" >
+
+										Please wait while we are validating your Email Id									</td>
+
+								</tr>
+
+							</table>
+
+				</div></td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25">Primary Contact Number <span class="error">*</span></td>
+
+              <td colspan="2"><input type="radio" name="txtContact" id="txtContact1" value="1" checked="checked" onclick="ShowHideContact(this.value);" />&nbsp;Landline&nbsp;<input type="radio" name="txtContact" id="txtContact2" value="2" onclick="ShowHideContact(this.value);"/> Mobile</td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25">&nbsp;</td>
+
+              <td colspan="2"><div id="ContactDiv" style="display:block;">
+
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                  <tr>
+
+                    <td width="6%" align="left" valign="middle">+91</td>
+
+                    <td width="26%" align="left" valign="middle"><input type="text" name="txtSTDCode" id="txtSTDCode" value="STD Code" maxlength="5" onfocus="changeText(this.value);" onblur="placeText(this.value);" size="5" style="width:100px;"  onkeypress="return checkChar(event);" /></td>
+
+                    <td width="68%" align="left" valign="middle"><input type="text" name="txtContactNumber" id="txtContactNumber" value="Contact Number" maxlength="10" size="10" style="width:100px;" onfocus="changeText1(this.value);" onblur="placeText1(this.value);"  onkeypress="return checkChar(event);"/></td>
+
+                  </tr>
+
+                </table>
+
+              </div>
+
+			  <div id="mobileDiv" style="display:none">
+
+			  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+			  <td width="6%" align="left" valign="middle">+91</td>
+
+			  <td width="94%" align="left" valign="middle"><input type="text" name="txtMobile" id="txtMobile" value="Mobile Number" maxlength="10" size="10" style="width:100px;" onfocus="changemob1(this.value);" onblur="placeMob1(this.value);"  onkeypress="return checkChar(event);"/></td>
+
+			  </table>
+
+			  </div>			  </td>
+
+            </tr>
+
+            <tr>
+
+              <td>&nbsp;</td>
+
+              <td></td>
+
+              <td>&nbsp;</td>
+
+            </tr>
+
+            <tr>
+
+            <td>&nbsp;</td>
+
+            <td>            </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25">&nbsp;</td>
+
+              <td colspan="2"><a href="javascript://" onClick="showterms();" >Terms 
+
+                &amp; Conditions</a>
+
+                  <input name="checkbox1" id="checkbox1" type="checkbox" value="checkbox"  onClick="terms(this);" style="border:0px">
+
+                Accepted</td>
+
+            </tr>
+
+            <tr valign="middle">
+
+              <td>&nbsp;</td>
+
+              <td height="20">&nbsp;</td>
+
+              <td colspan="2"><input type="hidden" name="status" value="0"></td>
+
+            </tr>
+
+            <tr align="center" valign="top">
+
+              <td colspan="4"><!--<input type="image" name="Submit" value="Submit" tabindex="7" id="submit_btn" src="images/submit.gif"  style="border:none">-->
+
+                 <!--<input type="reset" name="reset" value="Reset">--> <input type="submit" value="Submit" name="Submit" class="mybutton" id="submit_btn"  />             </td>
+
+            </tr>
+          </table>            
+	</form>
+
+    	
+
+</div>   
+
+            </div>
+        </div>
+        
+    </div>

@@ -1,0 +1,81 @@
+#{extends 'dealer.html' /}
+#{set title:'Home' /}
+
+<table  cellpadding="10" cellspacing="100" border="0" bgcolor="#FFFFFF" align="center">
+    	<tr>
+		<center><h2>Welcome ${a.username}</h2></center>
+        	<td align="center">
+			
+            	<table align="center">
+				
+                	<tr>
+                    	<td>
+                        	<a href=@{DealerControllerMap.checkorder}>
+                        		<img src="/public/img/checkorder.png" alt="Check Orders" title="Check Orders"   />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{DealerControllerMap.checkorder}><h2>Check Orders</h2></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{DealerControllerMap.checkapplications}>
+                        		<img src="/public/img/application.png" alt="Check Application" title="Check Application"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{DealerControllerMap.checkapplications}><h2>Check Application</h2></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    	<tr>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{DealerControllerMap.checkorder}>
+                        		<img src="/public/img/orderstatus.png" alt="Set Order Status" title="Set Order Status"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{DealerControllerMap.checkorder}><h2>Set Order Status</h2></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{application.underconstruct}>
+                        		<img src="/public/img/report.png" alt="Generate Report" title="Generate Report "  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{application.underconstruct}><h2>Generate Report</h2></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+                    </tr>        
+    </table>
+    </div>
+</div>
+
+
+	

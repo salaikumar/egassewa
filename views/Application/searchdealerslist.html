@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set title:'Dealers' /}
+
+</br>
+<div align="center"><h1>List of Dealer Change Requests</h1></div>
+</br></br><table align="center" border="0" cellspacing="25px">
+  <tr>
+    <th><h2>Agency  name #</h2></th>
+    <th><h2> Location</h2></th>
+    <th><h2> PinCode</h2></th>
+  </tr>
+  #{list items:l ,as:'l'} 
+  <tr>
+    <td><a href="@{Application.dealerdetails(l.id)}">${l.agencyname}</td>
+    <td><a href="@{Application.dealerdetails(l.id)}">${l.cityId.cityname}</td>
+    <td><a href="@{Application.dealerdetails(l.id)}">${l.pincode}</td>
+    
+  </tr>
+
+#{/list}       
+</table></br></br></br></br></br></br></br></br></br></br></br></br>

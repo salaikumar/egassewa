@@ -1,0 +1,30 @@
+
+#{extends 'dealer.html' /}
+#{set title:'Accessories Orders' /}
+</br>
+#{if l}
+<div align="center"><h1>Accessories Order</h1></div>
+</br></br><table align="center" border="0" cellspacing="25px">
+  <tr>
+    <th><h2>Customer Name</h2></th>
+    <th><h2>Order Number #</h2></th>
+    <th><h2>Accessory name</h2></th>
+    <th><h2>Date</h2></th>
+    <th><h2>Order Status</h2></th>
+  </tr>
+  #{list items:l ,as:'l'} 
+  <tr>
+   	<td><a href="@{DealerControllerMap.setorderstatus(l.id)}">${l.accountId.username}</td>
+    <td><a href="@{DealerControllerMap.setorderstatus(l.id)}">${l.id}</td>
+    <td><a href="@{DealerControllerMap.setorderstatus(l.id)}">${l.accessoriesId.name}</td>
+    <td><a href="@{DealerControllerMap.setorderstatus(l.id)}">${l.ordertime}</td>
+     <td><a href="@{DealerControllerMap.setorderstatus(l.id)}">${l.orderstatus}</td>
+  </tr>
+ 
+
+#{/list}       
+ #{/if}
+ #{else}		<tr>
+				<td><h2 align="center">There are no current orders for you to display</h2></td>
+#{/else}     </tr>
+</table></br></br></br></br></br></br></br></br></br></br></br></br>

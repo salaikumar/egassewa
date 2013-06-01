@@ -1,0 +1,437 @@
+#{extends 'main.html' /}
+#{set title:'Apply Online' /}
+
+#{form @NewConnectionRequestController.applyConnection()}
+<div class="clear"></div>
+
+        <div id="breadcrum" style="font-size:14px; font-weight:bold;">
+
+            	             
+        </div>
+	<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><strong>Apply Online</strong>
+				
+            </div>
+        </div>
+        <div class="check">
+        	<div class="width">
+            	<h2 style="margin-bottom:40px;">Apply Online</h2>
+            	<div class="cls"></div>
+				
+				<div id="leftpanel">
+
+	<h3 class="heading1">New Connection</h3>
+
+    
+
+    <form action="" method="post" name="booking" id="booking" onSubmit="return check();" >
+
+    	<table width="100%" border="0" cellspacing="1" cellpadding="3">
+
+            
+
+            <tr valign="top">
+
+              <td width="30">&nbsp;</td>
+
+              <td height="25" colspan="3">
+
+			  <div class="error" style="font-size:12px; margin-top:5px;">
+
+			 
+
+			  	<marquee onMouseOver="this.stop();" onMouseOut="this.start();">
+
+				
+
+				&nbsp;&nbsp;&nbsp;
+
+				<span style="color:#0000FF; font-size:15px;">*</span>&nbsp;If you already have a domestic connection of any Oil marketing Company you are not eligible for a new connection.
+
+				</marquee>
+
+			
+
+			  </div>
+
+			  </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" colspan="3"><strong>Distributor Detail </strong>
+
+                  <input name="mode" type="hidden" id="mode" value="add"></td>
+
+            </tr>
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" ><label for="stateid">State</label><span class="error">*</span></br></td>
+
+               <td colspan="2">
+				<label for="stateid">#{select 'stateid', items:s, valueProperty:'id', labelProperty:'statename', class:"test", id:'select2'/}</label>
+				                </td>
+
+            </tr>
+
+			
+
+					
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" ><label for="cityid">City</label> <span class="error">*</span></td>
+
+              <td colspan="2">
+
+			  <span id="sub1">
+
+	<label for="cityid">#{select 'cityid', items:c1, valueProperty:'id', labelProperty:'cityname', class:"test", id:'select2' /}</label>
+
+			   </span> 
+
+			   	<span id="state_loading" style="display:none;"><img src="images/ajax_small_load.gif" /></span>				</td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><label for="dealername">Distributor</label> <span class="error">*</span></td>
+
+              <td colspan="2" >
+
+			  <span id="sub2">
+				<label for="dealerid">#{select 'dealerid', items:d, valueProperty:'id', labelProperty:'agencyname', class:"test", id:'select2' /}</label>
+              
+			  </span>
+
+			  	<span id="city_loading" style="display:none;"><img src="images/ajax_small_load.gif" /></span> </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25">&nbsp;</td>
+
+             
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" colspan="3"><strong>Please fill the Personal Details </strong></td>
+
+            </tr>
+
+            <tr valign="top"  style="display:none;">
+
+              <td>&nbsp;</td>
+
+              <td style="width:200px">Connection Type 
+
+              <td colspan="2">
+
+			  	<input type="radio" name="connection_type" id="connection_type1" value="D" checked="checked" style="border:0px;" /><label for="connection_type1">Domestic </label>
+
+			  	<input type="radio" name="connection_type" id="connection_type2" value="ND"  style="border:0px;" /><label for="connection_type2">Non Domestic </label>			  </td>
+
+            </tr></br>
+
+            <tr valign="top" >
+
+              <td>&nbsp;</td>
+
+              <td style="width:200px"><label for="title">Title</label> </td>
+
+              <td colspan="2"><select name="title" title="title" id="title" class="textbox" >
+
+                  <option value="Mr" >Mr.</option>
+
+                  <option value="Ms">Ms.</option>
+
+              </select></td>
+
+            </tr>
+
+            <tr valign="top" >
+
+              <td>&nbsp;</td>
+
+              <td style="width:200px"><label for="firstname">First Name</label><span class="error">*</span></td> </td>
+
+              <td colspan="2"><input name="firstname" type="text" id="first_name" title="first name" value="${flash.firstname}" class="textbox"  maxlength="50"  onKeyPress="return checkchar(event);"/>
+              <font color="blue"><span class="error">#{error 'firstname' /}</span></font></td>
+
+            </tr>
+
+            <tr valign="top" >
+
+              <td>&nbsp;</td>
+
+              <td style="width:200px"><label for="lastname">Last Name</label> </td>
+
+              <td colspan="2"><input name="lastname" type="text" id="last_name" title="last name" value="" class="textbox"  maxlength="50" /></td>
+
+            </tr>
+
+            
+
+			<tr valign="top" >
+
+              <td>&nbsp;</td>
+
+              <td style="width:200px"><label for="dob">Date of Birth(dd/mm/yyyy)</label> <span class="error">*</span></td>
+
+              <td colspan="2">
+
+				<input type="text" name="dob" id="dob" value="${flash.dob}" class="textbox"  maxlength="350" /><br />
+			  <table cellpadding="0" cellspacing="0" border="0"><span class="error"><font color="blue">  #{error 'dob' /} </font></span></td>
+
+			  <tr>
+
+			  	<td>
+
+				
+				</td>
+
+			  </tr>
+
+			  </table>
+
+			 </td>
+
+            </tr>
+
+			
+
+            <tr>
+
+              <td>&nbsp;</td>
+
+              <td valign="top" style="padding-top:2px;"><label for="address">Address</label> <span class="error">*</span></td>
+
+              <td>
+
+              	<input type="text" name="address" id="address" value="${flash.address}" class="textbox"  maxlength="200" /><span class="error"><font color="blue">#{error 'address' /}</font></span></td><br />
+				
+              
+              </td>
+
+            </tr>
+
+            
+
+            <tr>
+
+            	<td>&nbsp;</td>
+
+                <td><label for="landmark">Landmark/Locality </label><span class="error">*</span></td>
+
+                <td>
+
+                	<input type="text" name="landmark" value="${flash.landmark}" id="landmark" class="textbox"  maxlength="30"  /><span class="error"><font color="blue">#{error 'landmark' /}</font></span></td>
+
+                </td>
+
+            </tr>
+
+            
+
+            <tr>
+
+              <td>&nbsp;</td>
+
+              <td><label for="pincode">Pin Code.</label> <span class="error">*</span></td>
+
+              <td><input class="textbox"  name="pincode" id="pincode" type="text" value="${flash.pincode}" title="Pin Code" maxlength="6" /><span class="error"><font color="blue">#{error 'pincode' /}</font></span></td>
+
+            </tr>
+
+            <tr>
+
+              <td>&nbsp;</td>
+
+              <td><label for="phonenumber"><label for="phonenumber">Contact No.</label></td>
+
+              <td><input class="textbox"  name="phonenumber" id="contactno" type="text" value="" maxlength="12"  /></td>
+
+            </tr>
+
+			<tr>
+
+              <td>&nbsp;</td>
+
+              <td><label for="id1">Identification Document</label> <span class="error">*</span></td>
+
+              <td>
+
+			 <label for="id1"> <select name="id1" id="id1" style="width:200px;"  class="textbox">
+
+			  	<option value="">[ SELECT IDENTIFICATION DOCUMENT ]</option>
+
+				<option value="Ration Card" >RATION CARD</option>
+
+			  	<option value="Electricity Bill" >ELECTRICITY BILL</option>
+
+				<option value="Telephone Bill" >TELEPHONE BILL</option>
+
+				<option value="Passport" >PASSPORT</option>
+
+				<option value="Employer Certificate" >EMPLOYER CERTIFICATE</option>
+
+				<option value="Flat Allot. Or Possession Letter" >FLAT ALLOT. OR POSSESSION LETTER</option>
+
+				<option value="House Registration Papers" >HOUSE REGISTRATION PAPERS</option>
+
+				<option value="Lic Policy" >LIC POLICY</option>
+
+				<option value="Voters Identity Card" >VOTER'S IDENTITY CARD</option>
+
+				<option value="Pan Card" >PAN CARD</option>
+
+				<option value="Driving License" >DRIVING LICENSE</option>
+
+				<option value="Bank A/C" >BANK A/C</option>
+
+				<option value="Water Bill" >WATER BILL</option>                
+
+			  </select></label>
+
+			  <span class="error"><font color="blue">#{error 'id1'/}</font></span></td>
+
+			  </td>
+
+            </tr>
+
+			<tr>
+
+              <td>&nbsp;</td>
+
+              <td><label for="idnumber"><label for="idnumber">Document Detail</label> <span class="error">*</span></td>
+
+              <td>
+
+			 <input class="textbox"  name="idnumber" id="idnumber" type="text" value="${flash.idnumber}" maxlength="50" //>
+
+			  <span class="error"><font color="blue">#{error 'idnumber' /}</font></span>
+			  
+
+			  </td>
+
+            </tr>
+
+            <tr>
+
+              <td>&nbsp;</td>
+
+              <td valign="top"><label for="email">E-mail</label> <span class="error">*</span></td>
+
+              <td colspan="4" align="left">
+
+			  <table cellpadding="0" cellspacing="0" border="0">
+
+			  	<tr>
+
+					<td valign="top">
+
+					<input class="textbox"  name="email" type="text" id="email" title="E-mail Id" value="${flash.email}" maxlength="50" " /><span class="error"><font color="blue">#{error 'email' /}</font></span></td>
+				</tr>
+
+			  </table> </td>
+
+            </tr>
+
+
+            <tr>
+
+            <td>&nbsp;</td>
+
+            <td>
+
+            <table>
+
+            <tr>
+
+            <td>
+
+
+            <td>
+
+           
+            <td>
+
+             <span style="color:#FF0000"> </span></td>
+
+            </tr>
+
+            </table>            </td>
+
+            </tr>
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td colspan="3">
+
+			  	<table width="100%" cellpadding="2" cellspacing="0" border="0">
+
+					<tr>
+
+						<td valign="top">
+
+							<label for="isConditionsAccepted"><input name=isConditionsAccepted"  id="checkbox2" type="checkbox" value="${flash.isConditionsAccepted}"  style="border:0px" /><span class="error"><font color="blue">#{error 'isConditionsAccepted' /}</font></span>
+
+						</td>
+
+						<td>
+
+							I here by declare and confirm that I do not have a domestic LPG connection of any Oil Marketing Company</label>    
+
+						</td>
+
+					</tr>
+
+				</table>
+
+			</td>
+
+            </tr>
+
+			
+
+            <tr align="center" valign="top">
+
+              <td colspan="2" align="left">
+                	<input type="button" value="Print" class="mybutton"  onClick=" window.print(); return false" />
+                <input type="submit" value="Submit" class="mybutton"  />
+
+			  </td>
+
+            </tr>
+
+          </table>
+
+    </form>
+
+   	
+
+</div>   
+
+ 
+
+#{/ form}

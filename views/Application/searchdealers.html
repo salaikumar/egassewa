@@ -1,0 +1,78 @@
+#{extends 'main.html' /}
+#{set title:'Search' /}
+
+
+<div class="clear"></div>
+
+        <div id="breadcrum" style="font-size:14px; font-weight:bold;">
+
+            	          
+
+        </div>
+	<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><strong>Search</strong>
+				
+            </div>
+        </div>
+        <div class="check">
+        	<div class="width">
+            	<h2 style="margin-bottom:40px;">Search Dealers</h2>
+            	<div class="cls"></div>
+				
+				<div id="leftpanel">
+
+	<h3 class="heading1">Search Dealers</h3>
+
+   <br>
+#{form @Application.searchdealerslist()}
+	<table width="100%" border="0" cellspacing="1" cellpadding="3">
+		
+		<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" ><label for="stateId">State</label><span class="error">*</span></br></td>
+
+               <td colspan="2">
+				<label for="stateId">#{select 'stateId', items:s, valueProperty:'id', labelProperty:'statename', class:"test", id:'select2'/}</label>
+				                </td>
+
+            </tr>
+
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" ><label for="cityId">City</label> <span class="error">*</span></td>
+
+              <td colspan="2">
+
+			  <span id="sub1">
+
+	<label for="cityId">#{select 'cityId', items:c1, valueProperty:'id', labelProperty:'cityname', class:"test", id:'select2' /}</label>
+
+			   </span> 
+
+			   	</td>
+
+            </tr>
+		
+       <tr>
+                      </tr>
+            <tr align="center" valign="top">
+
+              <td colspan="2" align="left">
+            
+                <input type="submit" value="Submit" class="mybutton"  />
+			</td>
+
+            </tr>	
+            
+
+          </table>
+
+</div>   
+#{/form}

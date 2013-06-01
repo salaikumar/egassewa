@@ -1,0 +1,71 @@
+#{extends 'user.html' /}
+#{set title:'Home' /}
+
+<div class="content">
+<div class="width">
+
+<table  cellpadding="10" cellspacing="100" border="0" bgcolor="#FFFFFF" align="center" style="padding-top:50px;">
+    	<tr>
+		
+        	<td align="center">
+			
+            	<table align="center">
+				
+                	<tr>
+                    	<td>
+                        	<a href=@{UserControllerMap.localareachange}>
+                        		<img src="/public/img/local.png" alt="Local Area" title="Local Area"   />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{UserControllerMap.localareachange}><h4><font color="darkturquoise">Local Area</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{UserControllerMap.locmigration}>
+                        		<img src="/public/img/station.png" alt="Fresh visitor" title="Fresh visitor"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{UserControllerMap.locmigration}><h4><font color="darkturquoise">Fresh visitor</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{UserControllerMap.checkappstatus}>
+                        		<img src="/public/img/application.png" alt="Check Application" title="Application Status" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{UserControllerMap.checkappstatus}><h4>Application Status</h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            
+        </tr>
+    	
+              
+    </table>
+    
+    
+    </div>
+</div>
+
+
+	

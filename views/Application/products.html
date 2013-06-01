@@ -1,0 +1,62 @@
+#{extends 'main.html' /}
+#{set title:'products' /}
+
+<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><strong>Products</strong>
+            </div>
+        </div>
+        <div class="check">
+        	<div class="width">
+            	<h2 style="margin-bottom:40px;">Products</h2>
+            	<div class="cls"></div>
+				
+				
+<div id="leftpanel">
+
+    <h3 class="heading1">Products</h3>
+
+    <div class="panel padding 50px">
+    <table  cellpadding="10" cellspacing="70" border="0" bgcolor="#FFFFFF" align="center" style="padding-top:50px;">
+    	<tr>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{application.dom}>
+                        		<img src="/public/img/domestic.png" alt="14.2 KG" title="Domestic"   />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{application.dom}><b><h3>Domestic</h3></b></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{application.nondom}>
+                        		<img src="/public/img/commercial.png" alt="Commercial" title="Commercial"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{application.nondom}><b><h3>Commercial</h3></b></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            
+        </tr>
+    </table>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>

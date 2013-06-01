@@ -1,0 +1,66 @@
+#{extends 'admin.html' /}
+#{set title:'Home' /}
+
+<table  cellpadding="10" cellspacing="100" border="0" bgcolor="#FFFFFF" align="center">
+    	<tr>
+		
+        	<td align="center">
+			
+            	<table align="center">
+				
+                	<tr>
+                    	<td>
+                        	<a href=@{AdminControllerMap.state()}>
+                        		<img src="/public/img/checkorder.png" alt="Check Orders" title="Check Orders"   />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{DealerControllerMap.checkorder}><h2>Create</h2></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{application.underconstruct}>
+                        		<img src="/public/img/placeorder.png" alt="Place Orders" title="Place Orders"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{application.underconstruct}><h2>Update</h2></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{DealerControllerMap.checkapplications}>
+                        		<img src="/public/img/application.png" alt="Check Application" title="Check Application"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{DealerControllerMap.checkapplications}><h2>Delete</h2></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        
+    	
+        	
+        </tr>        
+    </table>
+    </div>
+</div>
+
+
+	

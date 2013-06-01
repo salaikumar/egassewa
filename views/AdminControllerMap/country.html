@@ -1,0 +1,97 @@
+#{extends 'admin.html' /}
+#{set title:'Account' /}
+
+
+#{form @CountryController.createCountry()}
+<div class="content">
+
+				<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><a href="#">Admin</a><span>>></span><strong>Country</strong>
+            </div>
+        </div>
+        <div class="login">
+        	<div class="width">
+            	<h2>Country</h2>	
+                <div class="cols">
+                    <div class="mnu">
+                    	<h4>admin name</h4>
+                     </div>
+					<div class="mnu">
+						<div class="form">
+                        	<div class="fltL">
+                            	<span class="label"><span class="red">*</span><label for="countryname">Country Name</label></span>
+	                            <input type="text" value="" name="countryname"/>
+                            </div>
+                            <div class="cls"></div>
+                            <div class="fltL">
+                            	<span class="label"><span class="red">*</span><label for="countryId">Country ID</label></span>
+	                            <input type="text" value="" name="countryId"/>
+                            </div>
+                            <div class="cls">
+							</div>
+                          
+                        </div>
+						  
+                    </div>
+                </div>
+                <div class="col300">
+                	
+                </div>
+				<input type="reset" name="reset" value="Reset" />
+				<input type="submit" name="reset" value="Submit" />
+                <div class="cls"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+					</div>
+					
+					
+					<!-- To validate form (Intimation for giving proper username and password)-->
+					<script>
+
+					function validate()
+					{
+							var value1= document.getElementById('userName')
+						if(value1.value=="")
+							{
+							alert ("Please enter User Name")
+							return false
+							}
+						if (value1.value.indexOf("@")==-1)
+							{
+							alert("It seems you entered an invalid email address.")
+							return false
+							}
+
+							var value2= document.getElementById('password')
+						if(value2.value=="")
+							{
+							alert ("Please enter Password")
+							return false
+							}
+					}
+					
+					
+
+</script>
+                    
+        
+    </div>
+				
+				
+            </div>
+        </div>
+        
+    </div>  
+
+
+#{/form}
+
+
+
+  

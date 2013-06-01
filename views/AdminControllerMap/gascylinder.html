@@ -1,0 +1,77 @@
+#{extends 'admin.html' /}
+#{set title:'Account' /}
+
+
+#{form @GasCylinderController.createCylinder()}
+<div class="content">
+
+				<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><a href="#">Admin</a><span>>></span><strong>Gas Cylinder</strong>
+            </div>
+        </div>
+        <div class="login">
+        	<div class="width">
+            	<h2>Gas Cylinder</h2>	
+                <div class="cols">
+                    <div class="mnu">
+                    
+                     </div>
+					<div class="mnu">
+						<div class="form">
+                        	<div class="fltL">
+								<td height="25" >Gas Cylinder <span class="error">*</span></td>
+
+              <td colspan="2">
+              <td height="25" > <label for="gasCylinderType">Cylinder Type </label><span class="error">*</span></td>
+
+				  <select name="gasCylinderType" id="gasCylinderType" style="width:200px"   >
+
+				  <option value="">[ SELECT CYLINDER]</option>
+
+				  					  <option value="0" >DOMESTIC</option>
+
+										  <option value="1" >COMMERCIAL</option>
+
+										  
+					</select>				
+
+              </td>
+
+            </tr>
+
+                            	<span class="label"><span class="red">*</span><label for = "gasCylinderUnit">Gas Cylinder Unit</label></span>
+	                            <input type="text" value=""  name ="gasCylinderUnit"/>
+                            </div>
+                            <div class="cls"></div>
+                            <div class="fltL">
+                            	<span class="label"><span class="red">*</span><label for="gasCylinderPrice">Gas Cylinder Price</label></span>
+	                            <input type="text" value="" name = "gasCylinderPrice"/>
+                            </div>
+                            <div class="cls">
+							</div>
+                          
+                        </div>
+						  
+                    </div>
+                </div>
+                <div class="col300">
+                	
+                </div>
+				<input type="submit" name="reset" value="Submit" />
+				<input type="reset" name="reset" value="Reset" />
+                <div class="cls"></div>
+#{/form}
+            </div>
+        </div>
+    </div>
+</div>
+					
+					
+				        
+
+
+
+
+  

@@ -1,0 +1,115 @@
+#{extends 'user.html' /}
+#{set title:'Home' /}
+<div class="content">
+<div class="width">
+
+<table  cellpadding="10" cellspacing="100" border="0" bgcolor="#FFFFFF" align="center">
+
+	<div align="center"></br><h3>Welcome ${acc.username}!</h3></div>
+
+	<tr>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{UserControllerMap.newbook}>
+                        		<img src="/public/img/trolley.png" alt="Book Now" title="Book Now"   />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href="@{UserControllerMap.newbook}"><h4><font color="darkturquoise">Book Now</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href="@{UserControllerMap.bookhistory}">
+                        		<img src="/public/img/history.png" alt="Booked History" title="Booked History"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href="@{UserControllerMap.bookhistory}"><h4><font color="darkturquoise">Booked History</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href="@{UserControllerMap.statuscheckoptions}">
+                        		<img src="/public/img/status.png" alt="Check Status" title="Check Status"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href="@{UserControllerMap.statuscheckoptions}"><h4><font color="darkturquoise">Check Status</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    	<tr>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{UserControllerMap.products}>
+                        		<img src="/public/img/products.png" alt="Products" title="Products"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{UserControllerMap.products}><h4><font color="darkturquoise">Products</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{UserControllerMap.locchange}>
+                        		<img src="/public/img/info.png" alt="Change Location" title="Change Location "  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{UserControllerMap.locchange}><h4><font color="darkturquoise">Change Location</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{UserControllerMap.cancelorder}>
+                        		<img src="/public/img/cancel.png" alt="Cancel Order" title="Cancel Order"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{UserControllerMap.cancelorder}><h4><font color="darkturquoise">Cancel Order</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>        
+    </table>
+    </div>
+</div>
+
+
+  

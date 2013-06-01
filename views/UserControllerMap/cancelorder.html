@@ -1,0 +1,29 @@
+
+#{extends 'user.html' /}
+#{set title:'Status' /}
+<div class="content">
+<div class="width">
+
+</br>
+<div align="center"><h3><font color="red">Warning! Cancel the order by clicking it</font> </h3></div>
+</br></br><table align="center" border="0" cellspacing="40px">
+  <tr>
+    <th><h4>Order ID</h4></th>
+    <th><h4> Type</h4></th>
+    <th><h4> Date</h4></th>
+    <th><h4> Status</h4></th>
+    
+  </tr>
+  #{list items:l ,as:'l'} 
+  <tr>
+    <td><a href="@{UserControllerMap.deleteOrder(l.id)}">${l.id}</td>
+     <td><a href="@{UserControllerMap.deleteOrder(l.id)}">${l.gasCylinderId.gasCylinderType}</td>
+     <td><a href="@{UserControllerMap.deleteOrder(l.id)}">${l.orderedAt}</td>
+     <td><a href="@{UserControllerMap.deleteOrder(l.id)}">${l.orderstatus}</td>
+   
+  </tr>
+
+#{/list}       
+</table>
+</div></div>
+</br></br></br></br></br></br></br></br></br></br></br></br>

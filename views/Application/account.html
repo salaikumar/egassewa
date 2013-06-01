@@ -1,0 +1,59 @@
+#{extends 'main.html' /} #{set title:'Account' /}
+
+<div class="content">
+
+	<div class="content">
+		<div class="bread">
+			<div class="width">
+				<a href="#">Home</a><span>>></span><a href="#">Account</a><span>>></span><strong>Login
+					or Create Account</strong>
+			</div>
+		</div>
+		<div class="login">
+			<div class="width">
+				<h2>Login or Create Account</h2>
+				<div class="cols">
+					<div class="mnu">
+						<h4>I am a New Customer</h4>
+						<p>By creating an account with our store, you will be able to
+							move through the checkout process faster, store multiple shipping
+							addresses, view and track your orders in your account and more.</p>
+						<a href=@{application.create_acc} class="button"><span><span>Create
+									Account</span>
+						</span>
+						</a>
+					</div>
+
+
+
+					#{form @AccountController.newlogin()}
+					<div class="colR">
+						<h4>I am a Returning Customer</h4>
+						<span class="label"> <label for="username">Username</label>
+						</span> <span class="error"><font size="2" color=blue>#{error 'username' /}</font>
+						</span> <input type="text" value="${flash.username}" name="username"
+							id="" /> <span class="label"> <label for="password">password</label>
+						</span> <span class="error"><font size="2" color=blue>#{error 'password' /}</font>
+						</span> <input type="password" value="${flash.password}" name="password"
+							id="" /> <a href=@{application.forgotpassword}>Forgot Your
+							Password?</a> <input type="submit" name="submit" value="submit" />
+						<input type="reset" name="reset" value="reset" /> #{/ form}
+					</div>
+					<div class="cls"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+

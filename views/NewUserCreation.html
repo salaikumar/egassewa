@@ -1,0 +1,255 @@
+#{extends 'dealer.html' /}
+#{set title:'Home' /}
+
+
+#{ form @AdminController.createAdmin() }
+<div class="check">
+        	<div class="width">
+            	<h2 style="margin-bottom:40px;">Add Admin Page</h2>
+            	<div class="cls"></div>
+				
+				<div id="leftpanel">
+
+	<h3 class="heading1">New Admin Creation</h3>
+			
+			<form action="" method="post" name="booking" id="booking" onSubmit="return check();" >
+
+    	<table width="100%" border="0" cellspacing="10" cellpadding="30">
+
+            
+
+            <tr valign="top">
+
+              <td width="30">&nbsp;</td>
+
+              <td height="25" colspan="3">
+
+			
+
+			  </div>
+
+			  </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" colspan="3"><strong>Administrator  Detail </strong>
+
+                  <input name="mode" type="hidden" id="mode" value="add"></td>
+
+            </tr>
+
+
+			<tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" ><label for="adminEmployeeID">Administrator(Employee Id)</label> <span class="error">*</span></td>
+
+              <td colspan="2">
+
+				  <input type="text" name="adminEmployeeID" id=" " style="width:200px"  class="textbox" />
+
+              </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" ><label for="branchAddress">Company Branch Address</label><span class="error">*</span></td>
+
+              <td colspan="2">
+
+			  <span id="sub1">
+
+			  <input type="text" name="branchAddress" style="width:200px" class="textbox" />
+
+              	  
+
+			   </span> 
+
+			   	<span id="state_loading" style="display:none;"><img src="images/ajax_small_load.gif" /></span>				</td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25"><label for="cityId">Company Branch City</label><span class="error">*</span></td>
+
+              <td colspan="2" >
+
+			  <span id="sub2">
+
+              <input type="text" name="cityId" style="width:200px" title="distributor" id=" " class="textbox" />
+				
+
+
+            
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25">&nbsp;</td>
+
+             
+            </tr>
+
+            <tr valign="top">
+
+              <td>&nbsp;</td>
+
+              <td height="25" colspan="3"><strong>Personal Details </strong></td>
+
+            </tr>
+
+            
+
+            <tr valign="top" >
+
+              <td>&nbsp;</td>
+
+              <td style="width:200px"><label for="title">Title</label> </td>
+
+              <td colspan="2"><input type="text" name="title" title="title" id="title" class="textbox" />
+
+                  </td>
+
+            </tr>
+
+            <tr valign="top" >
+
+              <td>&nbsp;</td>
+
+              <td style="width:200px"><label for="firstname">First Name</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input name="firstname" type="text" id="first_name" title="first name" value="" class="textbox"  maxlength="50"  onKeyPress="return checkchar(event);"/></td>
+
+            </tr>
+
+            <tr valign="top" >
+
+              <td>&nbsp;</td>
+
+              <td style="width:200px"><label for="lastname">Last Name</label> </td>
+
+              <td colspan="2"><input name="lastname" type="text" id="last_name" title="last name" value="" class="textbox"  maxlength="50" onKeyPress="return checkchar(event);"/></td>
+
+            </tr>
+
+            
+
+			<tr valign="top" >
+
+              <td>&nbsp;</td>
+
+              <td style="width:200px"><label for ="dob">Date of Birth(yyyy/MM/dd)</label> <span class="error">*</span></td>
+
+              <td colspan="2">
+
+			  <table cellpadding="0" cellspacing="0" border="0">
+
+			  <tr>
+
+			  	<td>
+
+				 <input type="text" name="dob" id="" style="width:65px;" class="textbox" />&nbsp;&nbsp;
+
+				 
+		
+		
+				</td>
+
+				
+				</td>
+
+			  </tr>
+
+			  </table>
+
+			 
+
+			 </td>
+
+            </tr>
+
+			
+
+            <tr>
+
+              <td>&nbsp;</td>
+
+              <td valign="top" style="padding-top:2px;"><label for="address">Address</label> <span class="error">*</span></td>
+
+              <td>
+
+              	<input type="text" name="address" id=" " cols="50" rows ="100" value="" class="textbox"  maxlength="350" /><br />
+
+              	<input type="text" name="address" id=" " value="" class="HALF TITLE" style=" margin-top:5px;" maxlength="50"  /><br />
+
+              	<input type="text" name="address" id=" " value="" class="textbox" style=" margin-top:5px;" maxlength="50"  /><br />
+
+              </td>
+
+            </tr>
+
+            
+
+            <tr>
+
+            	<td>&nbsp;</td>
+
+                <td><label for="landmark">Landmark/Locality </label> <span class="error">*</span></td>
+
+                <td>
+
+                	<input type="text" name="landmark" value="" id="landmark" class="textbox"  maxlength="30"  />
+
+                </td>
+
+            </tr>
+
+            
+
+            <tr>
+
+              <td>&nbsp;</td>
+
+              <td><label for="pincode">Pin Code.</label> <span class="error">*</span></td>
+
+              <td><input class="textbox"  name="pincode" id="pincode" type="text" value="" title="Pin Code" maxlength="6" onKeyPress="return checknum(event)" /></td>
+
+            </tr>
+
+            <tr>
+
+              <td>&nbsp;</td>
+
+              <td><label for="phonenumber">Contact No.</label></td>
+
+              <td><input class="textbox"  name="phonenumber" id="contactno" type="text" value="" maxlength="12" onKeyPress="return checknum(event)" /></td>
+
+            </tr>
+
+			<tr>
+
+              <td>&nbsp;</td>
+
+
+			
+          </table>
+<div>
+	<input type="reset" name="submit" value="Reset">
+	<input type="submit" name="submit" value="Submit">
+	</div>
+    </form>
+#{/form}
+   </div>
+	</html>

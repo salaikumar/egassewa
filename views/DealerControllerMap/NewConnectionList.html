@@ -1,0 +1,18 @@
+
+#{extends 'main.html' /}
+#{set title:'Apply Online' /}
+</br>
+<div align="center"><h1>List of Connection Requests</h1></div>
+</br></br><table align="center" border="0" cellspacing="25px">
+  <tr>
+    <th><h2>Application #</h2></th>
+    <th><h2>Name</h2></th>
+  </tr>
+  #{list items:n ,as:'n'} 
+  <tr>
+    <td><a href="@{DealerControllerMap.newconnreq(n.id)}">${n.applicationnumber}</td>
+    <td><a href="@{DealerControllerMap.newconnreq(n.id)}">${n.firstname}</td>
+  </tr>
+
+#{/list}       
+</table></br></br></br></br></br></br></br></br></br></br></br></br>

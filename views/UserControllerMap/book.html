@@ -1,0 +1,47 @@
+#{extends 'mainbook.html' /}	
+#{set title:'Book Now' /}
+
+<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><strong>Book LPG</strong>
+            </div>
+        </div>
+        <div class="check">
+        	<div class="width">
+            	<h2 style="margin-bottom:40px;">Book LPG</h2>
+            	<div class="cls"></div>
+									
+				<br><br>
+				
+
+			  <tr valign="top">
+
+				<h3>  Gas Connection Number:${acc.uniquenumber}</h3>
+				<h3>  Username             :${acc.username}</h3>
+									<table align="center" border="0" cellspacing="25px">
+  									<tr>
+    								<th><h3>Gas Cylinder Type </h3></th>
+    								<th><h3>Gas Cylinder Unit</h3></th>
+    								<th><h3>Gas Cylinder Price</h3></th>
+  									</tr>
+  									#{list items:g ,as:'g'} 
+  									<tr>
+    								<td><h4><a href="@{OrderController.orderForCustomer(g.id)}">${g.gasCylinderType}</h4></td>
+   									<td><h4><a href="@{OrderController.orderForCustomer(g.id)}">${g.gasCylinderUnit}</h4></td>
+   									<td><h4><a href="@{OrderController.orderForCustomer(g.id)}">${g.gasCylinderPrice}</h4></td>
+  									</tr>
+									#{/ list }				
+			
+              <td>&nbsp;</td>
+
+
+              
+
+				</td>
+    </table>
+				
+            </div>
+        </div>
+        
+    </div>

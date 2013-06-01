@@ -1,0 +1,52 @@
+#{extends 'user.html' /}
+#{set title:'products' /}
+
+<div class="content">
+<div class="width">
+<div id="leftpanel"></br>
+
+    <div align="center"><h3 class="heading1">Products</h3></div>
+
+    <div class="panel padding 50px">
+    <table  cellpadding="10" cellspacing="70" border="0" bgcolor="#FFFFFF" align="center" style="padding-top:50px;">
+    	<tr>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{UserControllerMap.dom}>
+                        		<img src="/public/img/domestic.png" alt="Domestic" title="Domestic"   />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{UserControllerMap.dom}><b><h3>Domestic</h3></b></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td align="center">
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{UserControllerMap.nondom}>
+                        		<img src="/public/img/commercial.png" alt="Commercial" title="Commercial"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{UserControllerMap.nondom}><b><h3>Commercial</h3></b></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            
+     </tr>
+    </table>
+    </div>
+</div>
+            
+    </div>
+    </div>

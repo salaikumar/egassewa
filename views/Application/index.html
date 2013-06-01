@@ -1,0 +1,88 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+  <div class="content">
+    <div style="background:url(/public/img/shadBg2.png) no-repeat center bottom;">
+      <div class="minimal-slider banner">
+        <ul>
+          <li>
+            <div class="slider-img"> <a href=@{application.dom}><img src="/public/img/slide1.jpg" alt="" /></a></div>
+            <div class="desp slider-texts">
+              <h2>Domestic</h2>
+              <h3>Cylinder</h3>
+              <p> Domestic cylinder it is!<a href=@{application.dom}>Read More &gt;&gt;></a> <span class="fltL"> <strong>${g14.gasCylinderPrice}INR</strong>  
+            </div>
+          </li>
+          <li>
+            <div class="slider-img"> <a href=@{application.nondom}><img src="/public/img/slide2.jpg" alt="" /></a> </div>
+           <div class="desp slider-texts">
+              <h2>Commercial</h2>
+              <h3>Cylinder</h3>
+              <p> Commercial cylinder it is! <a href=@{application.nondom}>Read More &gt;&gt;></a> <span class="fltL"> <strong>${g19.gasCylinderPrice}INR</strong> 
+              
+              
+            </div>
+          </li>
+        </ul>
+		
+        <div class="cls"></div>
+      </div>
+      <script src="/public/js/easySlider1.7.js" type="text/javascript"></script> 
+      <script type="text/javascript"><!--
+$(document).ready(function() {
+			$('.minimal-slider').easySlider({
+          		auto: false,
+          		continuous: false,
+          		numeric: true 
+        	});
+});
+--></script> 
+    </div>
+	
+	
+    <div class="width">
+      <div class="featured-categories">
+        <div class="featured">
+            <h2>Featured Items</h2>
+            <ul>
+              <li>
+                <div class="item first"> <a href="#"><img alt="" src="/public/img/img2.jpg" /></a>
+                  <h3>${pro.name}</h3>
+                  <span class="price">${pro.price}-INR</span>  </div>
+                  
+                <div class="item"> <a href="#"><img alt="" src="/public/img/img3.jpg" /></a>
+                  <h3>${stove.name}</h3>
+                  <span class="price">${stove.price}-INR</span>  </div>
+                  
+                <div class="item"> <a href="#"><img alt="" src="/public/img/img4.jpg" /></a>
+                  <h3>${gas.name}</h3>
+                  <span class="price">${gas.price}-INR</span>  </div>
+                  
+                <div class="item last"> <a href="#"><img alt="" src="/public/img/img5.jpg" /></a>
+                  <h3>${reg.name}</h3>
+                  <span class="price">${reg.price}-INR</span>  </div>
+                  
+              </li>
+              <li>
+                <div class="item first"> <a href="#"><img alt="" src="/public/img/img6.jpg" /></a>
+                  <h3>${pet.name}</h3>
+                  <span class="price">${pet.price}-INR</span>  </div>
+                  
+                <div class="item"> <a href="#"><img alt="" src="/public/img/img7.jpg" /></a>
+                  <h3>${auto.name}</h3>
+                  <span class="price">${auto.price}-INR</span>  </div>
+                  
+                <div class="item"> <a href="#"><img alt="" src="/public/img/img8.jpg" /></a>
+                  <h3>${trad.name}</h3>
+                  <span class="price">${trad.price}-INR</span>  </div>
+                  
+                <div class="item last"> <a href="#"><img alt="" src="/public/img/img9.jpg" /></a>
+                  <h3>${bun.name}</h3>
+                  <span class="price">${bun.price}-INR</span>  </div>
+              </li>
+            </ul>
+            <div class="cls"></div>
+          </div>
+      </div>
+    </div>
+  </div>

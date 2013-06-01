@@ -1,0 +1,118 @@
+#{extends 'user.html' /}
+#{set title:'Book' /}
+<div class="content">
+<div class="width">
+
+<table  cellpadding="10" cellspacing="150" border="0" bgcolor="#FFFFFF" align="center">
+</br>
+
+	<div align="center"><h3> Select the cylinder to Book!</h3></div>
+	
+	<tr>
+			<td align="center"><div><font color="blue"><center><h4> Domestic </h4></center></font></div>
+        	
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{OrderController.orderForCustomer(g2.id)}>
+                        		<img src="/public/img/2kg.png" alt="2 KG" title="2 KG"   />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href="@{OrderController.orderForCustomer(g2.id)}"><h4><font color="darkturquoise">  ${g2.gasCylinderUnit}KG&nbsp; ${g2.gasCylinderPrice} INR</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td align="center"><div><font color="blue"><center><h4> Domestic </h4></center></font></div>
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{OrderController.orderForCustomer(g5.id)}>
+                        		<img src="/public/img/5kg.png" alt="Domestic 5KG" title="Booked History"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{OrderController.orderForCustomer(g5.id)}><h4><font color="darkturquoise"> ${g5.gasCylinderUnit}KG &nbsp; ${g5.gasCylinderPrice} INR</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="center"><div><font color="blue"><center><h4> Domestic </h4></center></font></div>
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{OrderController.orderForCustomer(g14.id)}>
+                        		<img src="/public/img/14kg.png" alt="Check Status" title="Check Status"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{OrderController.orderForCustomer(g14.id)}><h4><font color="darkturquoise">${g14.gasCylinderUnit}KG &nbsp; ${g14.gasCylinderPrice} INR</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    	<tr>
+		
+			<td align="center"><div><font color="blue"><center><h4> Commercial </h4></center></font></div></br>
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{OrderController.orderForCustomer(g19.id)}>
+                        		<img src="/public/img/19kg.png" alt="Products" title="Products"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{OrderController.orderForCustomer(g19.id)}><h4><font color="darkturquoise"> ${g19.gasCylinderUnit}KG&nbsp; ${g19.gasCylinderPrice} INR</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td align="center"><div><font color="blue"><center><h4> Commercial </h4></center></font></div></br>
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{OrderController.orderForCustomer(g35.id)}>
+                        		<img src="/public/img/35kg.png" alt="Change Location" title="Change Location "  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{OrderController.orderForCustomer(g35.id)}><h4><font color="darkturquoise"> ${g35.gasCylinderUnit}KG&nbsp; ${g35.gasCylinderPrice} INR</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="center"><div><font color="blue"><center><h4> Commercial </h4></center></font></div></br>
+            	<table align="center">
+                	<tr>
+                    	<td>
+                        	<a href=@{OrderController.orderForCustomer(g35.id)}>
+                        		<img src="/public/img/47kg.png" alt="Cancel Order" title="Cancel Order"  />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="center">
+	                    	<a href=@{OrderController.orderForCustomer(g47.id)}><h4><font color="darkturquoise"> ${g47.gasCylinderUnit}KG &nbsp; ${g47.gasCylinderPrice} INR</font></h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>        
+    </table>
+    </div>
+</div>
+
+
+  

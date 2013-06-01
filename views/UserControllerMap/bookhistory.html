@@ -1,0 +1,25 @@
+
+#{extends 'user.html' /}
+#{set title:'Booked History' /}
+<div class="content">
+<div class="width">
+</br>
+<div align="center"><h3>Booked History</h3></div>
+</br></br><table align="center" border="0" cellspacing="40px">
+  <tr>
+    <th><h3>Order ID</h3></th>
+    <th><h3> Type</h3></th>
+    <th><h3> Date</h3></th>
+    
+  </tr>
+  #{list items:l ,as:'l'} 
+  <tr>
+    <td><a href="@{UserControllerMap.orderdetails(l.id)}">${l.id}</td>
+     <td><a href="@{UserControllerMap.orderdetails(l.id)}">${l.gasCylinderId.gasCylinderType}</td>
+     <td><a href="@{UserControllerMap.orderdetails(l.id)}">${l.orderedAt}</td>
+   
+  </tr>
+
+#{/list}       
+</table>
+</div></div></br></br></br></br></br></br></br></br></br></br></br></br>

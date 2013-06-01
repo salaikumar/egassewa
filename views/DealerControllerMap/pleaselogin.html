@@ -1,0 +1,71 @@
+#{extends 'dealer.html' /}
+#{set title:'Account' /}
+
+<div class="content">
+
+				<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><a href="#">Dealer Account</a><span>>></span><strong>Login</strong>
+            </div>
+        </div>
+        <div class="login">
+        	<div class="width">
+            	<h2>Login to Dealer Account</h2>	
+                <div class="cols">
+                    
+					
+					<!-- To validate form (Intimation for giving proper username and password)-->
+					<script>
+
+					function validate()
+					{
+							var value1= document.getElementById('userName')
+						if(value1.value=="")
+							{
+							alert ("Please enter User Name")
+							return false
+							}
+						
+							var value2= document.getElementById('password')
+						if(value2.value=="")
+							{
+							alert ("Please enter Password")
+							return false
+							}
+					}
+					
+					
+
+</script>
+                    <div class="colR">
+        #{form @AccountController.newDealerlogin()}
+        				<h4> Please Login To Continue! </h4>            	
+                        <span class="label"><label for="uniquenumber">Dealer ID</label></span>
+                        <input type="text" value="" name="uniquenumber" id="uniquenumber"/>
+                        <span class="label"><label for="passwword">password</label></span>
+                        <input type="password" value="" name="password" id="password"/>
+                        <a href="#">Forgot Your Password?</a>
+                        
+                        <input type="submit" name="submit" value="submit"    />
+                        <input type="reset" name="reset"  value="reset"   />
+                    </div>
+                    <div class="cls"></div>
+                </div>
+            </div>
+        </div>
+        #{/ form }
+    </div>
+				
+				
+            </div>
+        </div>
+        
+    </div>  
+
+
+
+
+
+
+  

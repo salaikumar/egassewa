@@ -1,0 +1,103 @@
+#{extends 'user.html' /}
+#{set title:'Update Account' /}
+
+
+#{ form @AccountController.updateAccount() }
+<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Account</a><span>>></span><strong>Update Account</strong>
+            </div>
+        </div>
+        <div class="check">
+        	<div class="width">
+            	<h2 style="margin-bottom:40px;">Update </h2>
+            	<div class="cls"></div>
+				
+
+<div id="leftpanel">
+
+	<h3 class="heading1">Updating on GasMate</h3>
+
+    <fieldset>
+
+    <form action="" method="post" name="booking" id="booking" onSubmit="return check();" >
+
+          <table width="100%" border="0" cellspacing="1" cellpadding="0">
+
+			 <tr valign="top">
+
+              <td colspan="3" align="right" style="padding-top:5px; padding-bottom:5px;">
+
+              </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td width="1%">&nbsp;</td>
+
+              <td height="25" colspan="3"><strong>Online Account Detail </strong>
+
+                  
+
+            </tr>
+
+                       <tr valign="top">
+
+              <td>&nbsp;</td>
+			  <td height="25"> <h4>Old User Name : ${a.username}</h4>
+              <td height="25"><label for="username">User Name</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="username" type="text" id="username" title="User Name" value="" maxlength="50"  />
+				#{a @AccountController.updateUsername() }<input type="submit" name="submit" value="Update" > #{/a}
+						
+		    			
+	          </td>               </tr>
+			
+			  <tr valign="top">
+
+              <td>&nbsp;</td>
+			  
+              <td height="25"><label for="oldPassword"> Old Password</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="oldPassword" type="password" id="password" title="User Name" value="" maxlength="50"  />
+				
+			  <td height="25"><label for="newPassword">New Password</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="newPassword" type="password" id="password" title="User Name" value="" maxlength="50"  />
+
+			 <td height="25"><label for="confirmPassword">Confirm Password</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="confirmPassword" type="password" id="password" title="User Name" value="" maxlength="50"  />
+					#{a @AccountController.updatePassword() }<input type="submit" name="submit" value="Update" > #{/a}
+              										  </div>			  </td>
+            </tr>
+		
+	<tr valign="top">
+
+              <td>&nbsp;</td>
+				<td height="25"> <h4>Old Phonenumber : ${a.phonenumber}</h4> </td>
+              <td height="25"><label for="phonenumber">Phonenumber</label> <span class="error">*</span></td>
+
+              <td colspan="2"><input style="width:200px" name="phonenumber" type="text" id="username" title="User Name" value="" maxlength="50" onblur="check_email_id();" />
+				
+				#{a @AccountController.updatePassword() }<input type="submit" name="submit" value="Update" > #{/a}
+              
+              												  </div>			  </td>
+            </tr>
+			
+           
+   </table>            
+	</form>
+
+    </fieldset>	
+
+</div>   
+
+            </div>
+        </div>
+        
+    </div>
+    
+    #{/form}

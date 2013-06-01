@@ -1,0 +1,73 @@
+#{extends 'mainbook.html' /}	
+#{set title:'Book Now' /}
+
+#{form @OrderController.orderForCustomer()}
+<div class="content">
+    	<div class="bread">
+        	<div class="width">
+            	<a href="#">Home</a><span>>></span><strong>Book LPG</strong>
+            </div>
+        </div>
+        <div class="check">
+        	<div class="width">
+            	<h2 style="margin-bottom:40px;">Book LPG</h2>
+            	<div class="cls"></div>
+				
+		<h4>#{a @AccountController.logout()}Disconnect#{/a}</h4>	
+				
+									
+				<br><br>
+				
+			<label for="id" ><input type="hidden" value=${acc.id} name="id"></label>
+			  <tr valign="top">
+
+				<h3>${acc.uniquenumber}</h3>
+				<h3>${acc.username}</h3>
+			
+              <td>&nbsp;</td>
+
+              
+
+		<td height="25" > <label for="gasCylinderType">Cylinder Type </label><span class="error">*</span></td>
+				
+				<td colspan="2">
+				
+				
+				<select name="gasCylinderUnit" style="width:200px"  class="textbox" >
+
+										  <option value="">[SELECT CYLINDER TYPE]</option>
+										   <option value="1">COMMERCIAL</option>
+										    <option value="0">DOMESTIC</option>
+										 	</td>
+					
+				</select><br><br>
+             
+			<td height="25" > <label for="gasCylinderUnit">Cylinder Unit </label><span class="error">*</span></td>
+				
+				<td colspan="2">
+				
+				
+				<select name="gasCylinderUnit" style="width:200px"  class="textbox" >
+
+										  <option value="">[SELECT UNIT]</option>
+										  <option value="2">2-DOMESTIC</option>
+										  <option value="5">5-DOMESTIC</option>
+										  <option value="14">14-DOMESTIC</option>
+										  <option value="19">19-COMMERCIAL</option>
+										  <option value="35">35-COMMERCIAL</option>
+										  <option value="47.5">47.5COMMERCIAL-</option>
+				</td>
+					
+				</select><br><br>
+				
+				<td colspan="2" align="left">
+				
+				<input type="submit" value="submit" class="mybutton"  />
+				
+				</td>
+				
+            </div>
+        </div>
+        
+    </div>
+    #{/form}

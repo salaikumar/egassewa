@@ -1,0 +1,26 @@
+
+#{extends 'user.html' /}
+#{set title:'Transfer Location' /}
+</br>
+<div align="center"><h1>Your Location Change Applications </h1></div>
+<div align="center"><h4> Click on the applications to get full details</h4></div>
+</br></br><table align="center" border="0" cellspacing="25px">
+  <tr>
+    <th><h2>Application #</h2></th>
+    <th><h2>Name</h2></th>
+    <th><h2>Date</h2></th>
+    <th><h2>Status</h2></th>
+    
+    
+  </tr>
+  #{list items:l ,as:'l'} 
+  <tr>
+    <td><a href="@{UserControllerMap.checklocation(l.id)}">${l.id}</td>
+     <td><a href="@{UserControllerMap.checklocation(l.id)}">${l.account.username}</td>
+       <td><a href="@{UserControllerMap.checklocation(l.id)}">${l.timestamp}</td>
+        <td><a href="@{UserControllerMap.checklocation(l.id)}">${l.status}</td>
+   
+  </tr>
+
+#{/list}       
+</table></br></br></br></br></br></br></br></br></br></br></br></br>
